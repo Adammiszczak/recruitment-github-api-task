@@ -1,0 +1,64 @@
+html, body {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ font-size:100%;
+ vertical-align:baseline;
+ background:transparent;
+}
+
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #4e4e4e , black);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: inline-block;
+}
+form input{
+    margin: 10px;
+}
+
+.error-message {
+    color: #cc0033;
+    height: 15px;
+  }
+
+.container {
+    margin:0px auto;
+    padding:20px;
+    width:50%;
+    text-align: center;
+}
+
+.containerResume {
+    margin:0px auto;
+    padding:20px;
+    width:30%;
+    text-align: center;
+}
+
+.userCard {
+    border:10px solid #f5f5f5;
+    background-color: #ffffff;
+    position: relative;
+    text-align: left;
+    padding: 10px;
+}
+
+.userCard div {
+    padding: 10px 0;
+}
+
+#githubAvatar {
+    position: absolute;
+    width: 50px;
+    top: 10px;
+    right: 10px;
+}
