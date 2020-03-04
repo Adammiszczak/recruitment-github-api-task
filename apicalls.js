@@ -5,7 +5,10 @@ let formError = document.querySelector("div.error-message");
 let spans = document.querySelectorAll("span");
 let logoImg = document.querySelector("img#githubAvatar");
 let repostList = document.querySelector("span#githubRepos ul");
+
 let queryUrl, githubUser, githubWebsite, githubAvatar, githubRepos, githubLanguage, githubRepoName, githubRepoLang, githubRepoDesc;
+
+// Events 
 queryForm.addEventListener("click", (event) => {
     event.preventDefault()
 });
@@ -16,7 +19,13 @@ queryField.addEventListener("input", (event) => {
 
 querySubmit.addEventListener("click", (event) => {
     repostList.innerHTML = null;
+    spans[0].innerHTML = null;
+    spans[1].innerHTML = null;
     spans[2].innerHTML = null;
+    formError.innerHTML = null;
+
+// First Fetch  
+
     fetch(queryUrl)
         .then(response => console.log(response));
 
@@ -25,7 +34,7 @@ querySubmit.addEventListener("click", (event) => {
             if (response.ok) {
                 return response.json();
             } else {
-                formError.innerHTML = "formError";
+                formError.innerHTML = "This user doesn't exist, check another!";
                 return;
             }
         })
@@ -39,6 +48,7 @@ querySubmit.addEventListener("click", (event) => {
             spans[0].innerHTML = githubUser;
             spans[1].innerHTML = githubWebsite;
             logoImg.src = githubAvatar;
+// Second Fetch if possible             
             return fetch(githubRepos);
         })
         .then(response => {
@@ -56,9 +66,11 @@ querySubmit.addEventListener("click", (event) => {
 
                 githubRepoName = singleData['name'];
                 githubRepoDesc = singleData['description'] || "No description for this repo";
-                githubRepoLang = singleData['language'] || "Data doesn't exist";
+                githubRepoLang = singleData['language'] || "Language isn't specified";
 
                 languages.push(githubRepoLang);
+
+// Appending repositories data                
 
                 let repoLi = document.createElement("li");
                 let repoSpan1 = document.createElement("span");
@@ -71,6 +83,8 @@ querySubmit.addEventListener("click", (event) => {
                 repostList.appendChild(repoLi);
 
             })
+
+//  Count % of used languages at all projects           
 
             languageNumbers = languages.length;
             var result = {};
