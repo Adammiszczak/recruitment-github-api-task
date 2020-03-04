@@ -10,7 +10,7 @@ html, body {
 
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom, #4e4e4e , black);
     display:flex;
     flex-direction: column;
@@ -40,7 +40,7 @@ form input{
 .containerResume {
     margin:0px auto;
     padding:20px;
-    width:30%;
+    width:85%;
     text-align: center;
 }
 
@@ -54,6 +54,7 @@ form input{
 
 .userCard div {
     padding: 10px 0;
+    width: 90%;
 }
 
 #githubAvatar {
@@ -61,4 +62,15 @@ form input{
     width: 50px;
     top: 10px;
     right: 10px;
+}
+span#githubRepos ul {
+    white-space: pre-line;
+}
+span#githubRepos ul li {
+    padding: 5px 0;
+    text-align: justify;
+}
+
+span#githubRepos ul li span {
+    padding: 5px 0;
 }
