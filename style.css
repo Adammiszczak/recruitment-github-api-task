@@ -1,19 +1,20 @@
-html, body {
- margin:0;
- padding:0;
- border:0;
- outline:0;
- font-size:100%;
- vertical-align:baseline;
- background:transparent;
- font-family: 'Chakra Petch', sans-serif;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 
 body {
     min-height: 100vh;
     background-image: linear-gradient(to right top, #63dff9, #79ddfd, #8edafe, #a0d7fc, #b0d5f9, #abcef8, #a7c7f8, #a5bff6, #91b0f9, #7fa1fa, #6e91fb, #5f81fb);
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -22,7 +23,8 @@ body {
 form {
     display: inline-block;
 }
-form input{
+
+form input {
     margin: 10px 0;
     font-size: 16px;
     padding: 5px;
@@ -36,28 +38,30 @@ form input{
 form input[type="submit"]:hover {
     cursor: pointer;
 }
+
 .error-message {
     color: #cc0033;
     height: 15px;
-    font-weight: bold;;
-  }
+    font-weight: bold;
+    ;
+}
 
 .container {
-    margin:0px auto;
-    padding:20px;
-    width:50%;
+    margin: 0px auto;
+    padding: 20px;
+    width: 50%;
     text-align: center;
 }
 
 .containerResume {
-    margin:0px auto;
-    padding:20px;
-    width:85%;
+    margin: 0px auto;
+    padding: 20px;
+    width: 85%;
     text-align: center;
 }
 
 .userCard {
-    border:10px solid #f5f5f5;
+    border: 10px solid #f5f5f5;
     background-color: #ffffff;
     position: relative;
     text-align: left;
@@ -75,9 +79,11 @@ form input[type="submit"]:hover {
     top: 10px;
     right: 10px;
 }
+
 span#githubRepos ul {
     white-space: pre-line;
 }
+
 span#githubRepos ul li {
     padding: 5px 0;
     text-align: justify;
